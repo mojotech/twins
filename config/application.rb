@@ -58,5 +58,12 @@ module Twin
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Specifying which routes to include
+    if ENV['SITE'] == 'thing2'
+      config.paths['config/routes'] << File.join(Rails.root, "config/routes/thing2.rb")
+    else
+      config.paths['config/routes'] << File.join(Rails.root, "config/routes/thing1.rb")
+    end
   end
 end
