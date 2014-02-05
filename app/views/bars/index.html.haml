@@ -1,0 +1,13 @@
+%h1 Listing bars
+
+%table
+  %tr
+    %th Name
+    %th
+
+  - @bars.each do |bar|
+    %tr
+      %td= bar.name
+      %td= link_to 'Show', bar
+
+%br
