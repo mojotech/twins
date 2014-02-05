@@ -1,0 +1,11 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @bar.name
+
+= link_to 'Edit', edit_bar_path(@bar)
+\|
+= link_to 'Destroy', @bar, method: :delete, data: { confirm: 'Are you sure?' }
+\|
+= link_to 'Back', bars_path

@@ -1,0 +1,9 @@
+%h1 Editing bar
+
+= render 'form'
+
+= link_to 'Show', @bar
+\|
+= link_to 'Destroy', @bar, method: :delete, data: { confirm: 'Are you sure?' }
+\|
+= link_to 'Back', bars_path
