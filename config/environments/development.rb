@@ -34,4 +34,10 @@ Twin::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Do not cache assets
+  config.assets.cache_store = :null_store
+
+  # Do not cache sass
+  config.sass.cache = false
 end
