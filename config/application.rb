@@ -63,9 +63,9 @@ module Twin
 
     # Specifying which routes to include
     if ENV['SITE'] == 'thing2'
-      config.paths['config/routes'] << File.join(Rails.root, "config/routes/thing2.rb")
+      config.paths['config/routes'].unshift File.join(Rails.root, "config/routes/thing2.rb")
     else
-      config.paths['config/routes'] << File.join(Rails.root, "config/routes/thing1.rb")
+      config.paths['config/routes'].unshift File.join(Rails.root, "config/routes/thing1.rb")
     end
   end
 end
