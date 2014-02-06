@@ -53,6 +53,10 @@ module Twin
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    # Include site specific css manifests
+    # Environment variables are not available at compile time on heroku
+    config.assets.precompile += %w( thing1.css thing2.css )
+
     # Enable the asset pipeline
     config.assets.enabled = true
 
