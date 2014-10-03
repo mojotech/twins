@@ -37,7 +37,7 @@ class Thing2::BarsController < ApplicationController
         format.html { redirect_to @bar, notice: 'Bar was successfully created.' }
         format.json { render json: @bar, status: :created, location: @bar }
       else
-        format.html { render action: "new" }
+        format.html { render action: 'new' }
         format.json { render json: @bar.errors, status: :unprocessable_entity }
       end
     end
@@ -53,7 +53,7 @@ class Thing2::BarsController < ApplicationController
         format.html { redirect_to @bar, notice: 'Bar was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: 'edit' }
         format.json { render json: @bar.errors, status: :unprocessable_entity }
       end
     end
